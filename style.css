@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Quicksand", sans-serif;
+}
+h1{
+    font-family: "DM Serif Text", serif;
+}
+body{
+    background-color: black;
+ 
+}
+
+header{
+  position: fixed;
+  background-color: #292222;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+ul{
+  display: flex;
+}
+li{
+  margin-top: px;
+  margin-right: 20px;
+  list-style: none;
+
+}
+
+/* From Uiverse.io by Spacious74 */ 
+button {
+    font-size: 10px;
+    height: 25px;
+    padding: 0.6em 0.8em;
+    border-radius: 10em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+    align-content: center;
+  }
+  
+  .container {
+    position: relative;
+    padding: 1px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    border-radius: 0.9em;
+    transition: all 0.4s ease;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+  }
+  
+  .container:hover::before {
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    filter: blur(1.2em);
+  }
+  .container:active::before {
+    filter: blur(0.2em);
+  }
+
+  /* Home */
+ .moving-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000;
+    font-size: 24px;
+    animation: move-text 5s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes move-text {
+    10% { transform: translateX(14%); }
+    75% { transform: translateX(70%); }
+}
+
+/* Pause animation on hover */
+.moving-text:hover {
+    animation-play-state: paused;
+    color: #ff4500; /* Change color on hover for effect */
+}
+
+/* Projects */
+.container-projects .row{
+  display: flex;
+  justify-content: space-between;
+  margin: 160px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffc800;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: rgb(80, 58, 30);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Services */
+.s-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.s-col {
+  flex: 1 1 calc(25% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.s-col:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.s-col .image-container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 aspect ratio */
+  position: relative;
+  overflow: hidden;
+}
+
+.s-col img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.s-col h3 {
+  font-size: 1.5em;
+  margin: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.s-col p {
+  padding: 0 15px 20px;
+  color: #666;
+  text-align: center;
+}
+
+/* Contact */
+.container-contact{
+  margin-top: 180px;
+  margin-bottom: 170px;
+}
+
+.container-contact div{
+  margin-top: 40px;
+}
+
+form{
+  justify-items: center;
+ 
+}
+
+.container-contact div input{
+  border-radius: 30px;
+  width: 400px;
+  height: 40px;
+  font-size: 20px;
+}
+
+/* Footer */
+.container-footer{
+  background-color: #292222;
+  color:  rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+.container-footer div{
+  margin-left: 20px;
+   margin-top: 17px;
+}
+ a{
+  color: white;
+}
